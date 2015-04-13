@@ -2,7 +2,7 @@
 $white: #FFFFFF;
 $offwhite: #FFB0A9;
 
-.subheader {font-family: "Roboto"; font-weight: 500; text-transform: upper-case; color: $offwhite;  }
+.subheader {font-family: "Roboto"; font-weight: 500; text-transform: upper-case; color: $offwhite; text-transform: uppercase;  }
 
 body {
     background: #EC5F53;
@@ -15,7 +15,7 @@ h2 {
     font-family: "Roboto Slab";
     font-size: 2em;
 }
-aside {@extend .subheader;}
+aside {@extend .subheader; font-size: 1.3em; }
 
 
 #header {
@@ -24,7 +24,7 @@ aside {@extend .subheader;}
         margin-bottom: -.1em;
         }
 
-    aside { text-align: left; margin-left: .5em; font-size: 1.3em; }
+    aside { text-align: left; margin-left: .5em; }
 }
 
 #content {
@@ -32,14 +32,8 @@ aside {@extend .subheader;}
     margin: 0 auto;
 
     h2 { margin-bottom: -.1em;}
-}
 
-    nav ul {
-            list-style: none;
-            overflow: hidden;
-            li { @extend .subheader; font-size: 1em; float: left;}
 
-        }
 #splash-me {
     max-width: 10vw;
     height: 10vw;
@@ -47,4 +41,24 @@ aside {@extend .subheader;}
     background: $offwhite;
     border-radius: 50%;
     margin: auto;
+    margin-bottom: 1em;
+}
+
+nav ul {
+        list-style: none;
+        overflow: hidden;
+        //position: absolute;
+        //width: 50vw;
+        margin: 0 auto;
+        li {
+            @extend .subheader;
+            font-size: .9em;
+            float: left;
+            margin: .2em 1em;
+            text-shadow: 0px 2px 4px #EB4639;
+
+            &:hover {cursor: pointer;}
+        }
+
+    }
 }
