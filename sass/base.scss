@@ -1,9 +1,7 @@
-
 $white: #FFFFFF;
 $offwhite: #FFB0A9;
-$fadewhite: #EE7166;
 
-.subheader {font-family: "Roboto"; font-weight: 500; text-transform: upper-case; color: $offwhite; text-transform: uppercase;  }
+.subheader { font-family: "Roboto"; font-weight: 500; text-transform: upper-case; color: $offwhite; text-transform: uppercase;  }
 
 body {
     background: #EC5F53;
@@ -30,11 +28,10 @@ aside {@extend .subheader; font-size: 1.1em; }
 }
 
 #content {
-    max-width: 35%;
     margin: 0 auto;
-
+    width: 80%;
     h2 { margin-bottom: -.1em;}
-
+}
 
 #splash-me {
     max-width: 10vw;
@@ -44,17 +41,31 @@ aside {@extend .subheader; font-size: 1.1em; }
     border-radius: 50%;
     margin: auto;
     margin-bottom: 1em;
-}
-
-.panel {float: left; display: none;
-    &.active {display: block;}
     }
-nav ul {
+
+.panel {
+    display: none;
+    max-width: 35%;
+    margin: 0 auto;
+    margin-top: 6em;
+    &.active {display: block;}
+
+    article { margin-bottom: 4em; }
+
+    }
+
+nav {
+    width: 100%;
+    text-align: center;
+
+    ul {
         list-style: none;
         overflow: hidden;
+        padding: 0;
+        display: inline-block;
         position: absolute;
-        width: 100%;
-        margin: 0 auto;
+        left: calc(50% - 192px);
+
         li {
             @extend .subheader;
             font-size: .9em;
@@ -63,10 +74,10 @@ nav ul {
             text-shadow: 0px 2px 4px #EB4639;
             border-bottom: 2px solid $offwhite;
             opacity: .5;
+            transition: all .05s ease-in-out;
 
-            &:hover {cursor: pointer;}
+            &:hover {cursor: pointer; color: mix($offwhite, $white, 15); border-color: mix($offwhite, $white, 15); }
             &.active {color: $white; border-bottom: 3px solid $white; opacity: 1;}
+            }
         }
-
-    }
 }

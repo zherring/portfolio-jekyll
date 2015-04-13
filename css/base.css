@@ -1,4 +1,4 @@
-.subheader, aside, #content nav ul li {
+.subheader, aside, nav ul li {
   font-family: "Roboto";
   font-weight: 500;
   text-transform: upper-case;
@@ -31,39 +31,54 @@ aside {
   margin-left: .5em; }
 
 #content {
-  max-width: 35%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 80%; }
   #content h2 {
     margin-bottom: -.1em; }
-  #content #splash-me {
-    max-width: 10vw;
-    height: 10vw;
-    display: block;
-    background: #FFB0A9;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 1em; }
-  #content .panel {
-    float: left;
-    display: none; }
-    #content .panel.active {
-      display: block; }
-  #content nav ul {
+
+#splash-me {
+  max-width: 10vw;
+  height: 10vw;
+  display: block;
+  background: #FFB0A9;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 1em; }
+
+.panel {
+  display: none;
+  max-width: 35%;
+  margin: 0 auto;
+  margin-top: 6em; }
+  .panel.active {
+    display: block; }
+  .panel article {
+    margin-bottom: 4em; }
+
+nav {
+  width: 100%;
+  text-align: center; }
+  nav ul {
     list-style: none;
     overflow: hidden;
+    padding: 0;
+    display: inline-block;
     position: absolute;
-    width: 100%;
-    margin: 0 auto; }
-    #content nav ul li {
+    left: calc(50% - 192px); }
+    nav ul li {
       font-size: .9em;
       float: left;
       margin: .2em 1em;
       text-shadow: 0px 2px 4px #EB4639;
       border-bottom: 2px solid #FFB0A9;
-      opacity: .5; }
-      #content nav ul li:hover {
-        cursor: pointer; }
-      #content nav ul li.active {
+      opacity: .5;
+      -webkit-transition: all .05s ease-in-out;
+              transition: all .05s ease-in-out; }
+      nav ul li:hover {
+        cursor: pointer;
+        color: #fff3f2;
+        border-color: #fff3f2; }
+      nav ul li.active {
         color: #FFFFFF;
         border-bottom: 3px solid #FFFFFF;
         opacity: 1; }
