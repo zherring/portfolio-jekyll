@@ -1,6 +1,7 @@
 
 $white: #FFFFFF;
 $offwhite: #FFB0A9;
+$fadewhite: #EE7166;
 
 .subheader {font-family: "Roboto"; font-weight: 500; text-transform: upper-case; color: $offwhite; text-transform: uppercase;  }
 
@@ -13,9 +14,10 @@ body {
 
 h2 {
     font-family: "Roboto Slab";
-    font-size: 2em;
+    font-weight: 400;
+    font-size: 1.8em;
 }
-aside {@extend .subheader; font-size: 1.3em; }
+aside {@extend .subheader; font-size: 1.1em; }
 
 
 #header {
@@ -28,7 +30,7 @@ aside {@extend .subheader; font-size: 1.3em; }
 }
 
 #content {
-    max-width: 40%;
+    max-width: 35%;
     margin: 0 auto;
 
     h2 { margin-bottom: -.1em;}
@@ -44,11 +46,14 @@ aside {@extend .subheader; font-size: 1.3em; }
     margin-bottom: 1em;
 }
 
+.panel {float: left; display: none;
+    &.active {display: block;}
+    }
 nav ul {
         list-style: none;
         overflow: hidden;
-        //position: absolute;
-        //width: 50vw;
+        position: absolute;
+        width: 100%;
         margin: 0 auto;
         li {
             @extend .subheader;
@@ -56,8 +61,11 @@ nav ul {
             float: left;
             margin: .2em 1em;
             text-shadow: 0px 2px 4px #EB4639;
+            border-bottom: 2px solid $offwhite;
+            opacity: .5;
 
             &:hover {cursor: pointer;}
+            &.active {color: $white; border-bottom: 3px solid $white; opacity: 1;}
         }
 
     }
