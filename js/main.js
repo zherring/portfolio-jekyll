@@ -4,15 +4,11 @@ $('li').each(function(){
     menuArray.push(Math.round($(this).outerWidth(true)));
     });
 
+//var liIndex = 0;
 
-
-var liIndex = $('li.active').index();
-var placement = 0;
-
-window.console.log(liIndex, placement);
-
-
-var menuPlacement = function() {
+var menuPlacement = function(e) {
+    var liIndex = $('li.active').index();
+    var placement = 0;
     for (var i = 0; i <= liIndex; i++) {
         if (i < liIndex) {
             placement += menuArray[i];
@@ -23,15 +19,23 @@ var menuPlacement = function() {
             break;
         } else { break; }
     }
-    window.console.log(placement, "inside");
-    $('nav ul').css('left', function(){
-        return ('calc(50% - ' + placement + ')');
-    });
+    window.console.log(placement, "placement", e);
+    $('nav ul').css('margin-left', -placement);
 };
 
 menuPlacement();
 
-window.console.log(placement);
+
+
+
+
+$('nav li').click(function(){
+    $('nav li').removeClass('active');
+    $(this).toggleClass('active');
+    var varClick = $(this).index();
+    menuPlacement(varClick);
+});
+//window.console.log(placement);
 // if (var index = 0; index < liIndex; index++) {
 //     window.console.log("fired");
 // }
