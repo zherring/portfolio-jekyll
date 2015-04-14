@@ -25,15 +25,19 @@ var menuPlacement = function(e) {
 
 menuPlacement();
 
-
+var activePane = function(e) {
+    $('#content-container > div').removeClass('active');
+    $('#content-container > div:nth-child('+e+1+')').addClass('active');
+};
 
 
 
 $('nav li').click(function(){
     $('nav li').removeClass('active');
-    $(this).toggleClass('active');
+    $(this).addClass('active');
     var varClick = $(this).index();
     menuPlacement(varClick);
+    activePane(varClick);
 });
 //window.console.log(placement);
 // if (var index = 0; index < liIndex; index++) {
