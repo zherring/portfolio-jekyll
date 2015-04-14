@@ -65,7 +65,8 @@ nav {
         padding: 0;
         display: inline-block;
         position: absolute;
-        left: calc(50% - 192px);
+        left: 50%;
+        transition: all .5s ease-in-out;
 
         li {
             @extend .subheader;

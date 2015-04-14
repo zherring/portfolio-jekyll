@@ -64,7 +64,9 @@ nav {
     padding: 0;
     display: inline-block;
     position: absolute;
-    left: calc(50% - 192px); }
+    left: 50%;
+    -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out; }
     nav ul li {
       color: #F7867A;
       font-size: .9em;
