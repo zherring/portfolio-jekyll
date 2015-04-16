@@ -44,17 +44,44 @@ aside {@extend .subheader; font-size: 1.1em; }
     margin-bottom: 1em;
     }
 
-.panel {
-    display: none;
-    max-width: 35%;
+
+#panel-container {
+    width: 100em;
+    overflow: hidden;
     margin: 0 auto;
+    ;
+
+}
+#panel-content {
+    display: flex nowrap row;
+    width: 400em;
+}
+
+.panel {
+    display:none;
+    width: 40%;
+    //float: left;
+    margin: 0 auto;
+    //margin-left: 3em;
     margin-top: 6em;
+    transition: all .2s ease-in-out;
     &.active {display: block;}
+/*     &.left-in {
+    //animation: ani-left .3s ease-out normal;
+}
+
+&.left-out {
+    //animation: ani-left .3s ease-in-out reverse;
+} */
+
+
 
     article { margin-bottom: 4em; }
 
     }
 
+
+.hidden {display: hidden;}
 nav {
     width: 100%;
     text-align: center;
@@ -85,3 +112,11 @@ nav {
             }
         }
 }
+
+/*
+@keyframes ani-left {
+    0% { transform: translatex(-5em) ; opacity: 0; }
+    30% {opacity: 0; }
+    100% { transform: translatex(0); opacity: 1;}
+    }
+ */
