@@ -1,41 +1,106 @@
-/*
-Error: Invalid CSS after "    width": expected "{", was ": 31em * $i;"
-        on line 116 of /Users/zachherring/Documents/code/portfolio-starter/sass/base.scss
+.subheader, aside, nav ul li {
+  font-family: "Roboto";
+  font-weight: 500;
+  text-transform: upper-case;
+  color: #FFB0A9;
+  text-transform: uppercase; }
 
-111: 
-112: // Transition
-113: 
-114: @for $i from 1 through 4
-115:   #position-#{$i}
-116:     width: 31em * $i;
-117: 
-118: /*
-119: @keyframes ani-left {
-120:     0% { transform: translatex(-5em) ; opacity: 0; }
-121:     30% {opacity: 0; }
+body {
+  background: #EC5F53;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px; }
 
-Backtrace:
-/Users/zachherring/Documents/code/portfolio-starter/sass/base.scss:116
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1165:in `expected'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1101:in `expected'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1096:in `tok!'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:641:in `block'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:286:in `for_directive'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:219:in `special_directive'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:194:in `directive'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:660:in `block_child'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:653:in `block_contents'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:42:in `parse'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:393:in `_to_tree'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:268:in `render'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:404:in `run'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:62:in `process_result'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    width\": expected \"{\", was \": 31em * $i;\"\A         on line 116 of /Users/zachherring/Documents/code/portfolio-starter/sass/base.scss\A \A 111: \A 112: // Transition\A 113: \A 114: @for $i from 1 through 4\A 115:   #position-#{$i}\A 116:     width: 31em * $i;\A 117: \A 118: /*\A 119: @keyframes ani-left {\A 120:     0% { transform: translatex(-5em) ; opacity: 0; }\A 121:     30% {opacity: 0; }"; }
+h2 {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 1.8em; }
+
+aside {
+  font-size: 1.1em; }
+
+#header h1 {
+  font-family: "Roboto Slab";
+  font-size: 2em;
+  font-weight: 100;
+  text-align: left;
+  margin: .3em;
+  margin-bottom: -.1em; }
+#header aside {
+  text-align: left;
+  margin-left: .5em; }
+
+#content {
+  margin: 0 auto;
+  width: 80%; }
+  #content h2 {
+    margin-bottom: -.1em; }
+
+#splash-me {
+  max-width: 10vw;
+  height: 10vw;
+  display: block;
+  background: #FFB0A9;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 1em; }
+
+#panel-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 31em;
+  margin-top: 5em; }
+
+#panel-content {
+  height: 10em;
+  width: 124em;
+  height: 10em;
+  overflow: visible;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out; }
+
+.panel {
+  width: 31em;
+  opacity: 0;
+  float: left;
+  -webkit-transition: all .2s ease-out;
+          transition: all .2s ease-out;
+  float: left; }
+  .panel.active {
+    display: block;
+    opacity: 1; }
+  .panel article {
+    margin-bottom: 4em; }
+
+.hidden {
+  display: hidden; }
+
+nav {
+  width: 100%;
+  text-align: center; }
+  nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -webkit-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out; }
+    nav ul li {
+      color: #F7867A;
+      font-size: .9em;
+      float: left;
+      margin: .2em 1em;
+      text-shadow: 0px 2px 4px #EB4639;
+      box-shadow: inset 0 0 0 #fff3f2;
+      -webkit-transition: all .05s ease-in-out;
+              transition: all .05s ease-in-out;
+      padding-bottom: .2em; }
+      nav ul li:hover {
+        cursor: pointer;
+        color: #FFB0A9;
+        box-shadow: inset 0 -2px 0 #FFB0A9; }
+      nav ul li.active {
+        color: #FFFFFF;
+        box-shadow: inset 0 -2px 0 #FFFFFF; }
