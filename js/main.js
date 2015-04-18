@@ -27,9 +27,11 @@ var activePane = function(e) {
     // correct the index so the child-of matches
     var childOf = e + 1;
     var activePanel = $('#panel-content > div:nth-child('+childOf+')');
-    window.console.log(activePanel);
+    var panelSlide = e * 31 + "em";
+    window.console.log(panelSlide);
     $('.panel').removeClass('active');
     $(activePanel).addClass('active');
+    $('#panel-content').css('transform', 'translatex(-'+panelSlide+')');
 };
 
 
