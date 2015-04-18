@@ -26,8 +26,10 @@ menuPlacement();
 var activePane = function(e) {
     // correct the index so the child-of matches
     var childOf = e + 1;
+    var activePanel = $('#panel-content > div:nth-child('+childOf+')');
+    window.console.log(activePanel);
     $('.panel').removeClass('active');
-    $('#content-container > div:nth-child('+childOf+')').addClass('active');
+    $(activePanel).addClass('active');
 };
 
 

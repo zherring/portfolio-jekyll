@@ -46,28 +46,16 @@ aside {
   margin-bottom: 1em; }
 
 #panel-container {
-  width: 100em;
-  overflow: hidden;
-  margin: 0 auto; }
-
-#panel-content {
-  display: flex nowrap row;
-  width: 400em; }
+  overflow: visible;
+  margin: 0 auto;
+  max-width: 65%;
+  margin-top: 5em;
+  height: 10em; }
 
 .panel {
-  display: none;
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 6em;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
-  /*     &.left-in {
-      //animation: ani-left .3s ease-out normal;
-  }
-  
-  &.left-out {
-      //animation: ani-left .3s ease-in-out reverse;
-  } */ }
+  float: left;
+  width: 100%;
+  display: none; }
   .panel.active {
     display: block; }
   .panel article {
