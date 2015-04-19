@@ -56,12 +56,12 @@ aside {
   width: 124em;
   height: 10em;
   overflow: visible;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out; }
+  -webkit-transition: all .1s ease-in-out;
+          transition: all .1s ease-in-out; }
 
 .panel {
   width: 31em;
-  opacity: 0;
+  opacity: .2;
   float: left;
   -webkit-transition: all .2s ease-out;
           transition: all .2s ease-out;
@@ -69,6 +69,22 @@ aside {
   .panel.active {
     display: block;
     opacity: 1; }
+  .panel.position-1 {
+    -webkit-transform: translatex(0);
+        -ms-transform: translatex(0);
+            transform: translatex(0); }
+  .panel.position-2 {
+    -webkit-transform: translate(-31em);
+        -ms-transform: translate(-31em);
+            transform: translate(-31em); }
+  .panel.position-3 {
+    -webkit-transform: translatex(-62em);
+        -ms-transform: translatex(-62em);
+            transform: translatex(-62em); }
+  .panel.position-4 {
+    -webkit-transform: translate(-93em);
+        -ms-transform: translate(-93em);
+            transform: translate(-93em); }
   .panel article {
     margin-bottom: 4em; }
 
